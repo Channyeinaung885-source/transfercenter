@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width-device-width, intial-scale-1.0">
+        <title>Transfer Central</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <link rel="stylesheet" href="resources/css/quary.css">
+        <link rel="stylesheet" href="vendors/css/normalize.css">
+        <link rel="stylesheet" href="vendors/css/grid.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Source+Code+Pro:ital,wght@1,500&display=swap" rel="stylesheet">
+    </head> 
+    <body>
+        <header>
+           <nav>
+                <div class="row">
+                    <img src="resources/css/img/logo (2).png" alt="logo" class="logo">
+                    <div class="navbar">
+                    <a href="#home"><i class="fas fa-home nav-icon"></i><br>home</a>
+                    <a href="#news"><i class="fab fa-leanpub nav-icon"></i><br>News</a>
+                    <a href="#preview"><i class="fas fa-concierge-bell nav-icon"></i><br>Fixtures</a>
+                        <div class="dropdown">
+                        <button class="dropbtn" onclick="myFunction()"><i class="fas fa-user-plus nav-icon"></i><br>SignUp</a></button>
+                            <div class="dropdown-content" id="myDropdown">
+                                <a href="#sign-up"><i class="fas fa-sign-in-alt nav-icon"></i><br>SignIn</a>
+                                <a href="#about-me"><i class="fas fa-info-circle nav-icon"></i><br>Info Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+                <div class="hero-text-box">
+                        <h1>football is<br>
+                          <span class="word wisteria">Hopeful.</span>
+                          <span class="word belize">happiness.</span>
+                          <span class="word pomegranate">Art.</span>
+                          <span class="word green">God.</span>
+                        </h1>
+                </div>
+                <a id="button"><i class="fas fa-angle-up top-icon"></i></a>
+                <script>var words = document.getElementsByClassName('word');
+                    var wordArray = [];
+                    var currentWord = 0;
+                    
+                    words[currentWord].style.opacity = 1;
+                    for (var i = 0; i < words.length; i++) {
+                      splitLetters(words[i]);
+                    }
+                    
+                    function changeWord() {
+                      var cw = wordArray[currentWord];
+                      var nw = currentWord == words.length-1 ? wordArray[0] : wordArray[currentWord+1];
+                      for (var i = 0; i < cw.length; i++) {
+                        animateLetterOut(cw, i);
+                      }
+                      
+                      for (var i = 0; i < nw.length; i++) {
+                        nw[i].className = 'letter behind';
+                        nw[0].parentElement.style.opacity = 1;
+                        animateLetterIn(nw, i);
+                      }
+                      
+                      currentWord = (currentWord == wordArray.length-1) ? 0 : currentWord+1;
+                    }
+                    
+                    function animateLetterOut(cw, i) {
+                      setTimeout(function() {
+                      cw[i].className = 'letter out';
+                      }, i*80);
+                    }
+                    
+                    function animateLetterIn(nw, i) {
+                      setTimeout(function() {
+                      nw[i].className = 'letter in';
+                      }, 340+(i*80));
+                    }
+                    
+                    function splitLetters(word) {
+                      var content = word.innerHTML;
+                      word.innerHTML = '';
+                      var letters = [];
+                      for (var i = 0; i < content.length; i++) {
+                         var letter = document.createElement('span');
+                        letter.className = 'letter';
+                        letter.innerHTML = content.charAt(i);
+                        word.appendChild(letter);
+                        letters.push(letter);
+                      }
+                      
+                      wordArray.push(letters);
+                    }
+                    
+                    changeWord();
+                    setInterval(changeWord, 4000);</script>
+        </header> 
+    <section class="our-service" id="home">
+        <div class="row">
+            <h2>How we work it</h2>
+            <div class="service">
+            <div class="service-container">
+                <div class="row">
+                    <div class="col span-1-of-2 service-1">
+                       
+                    </div> 
+                    <div class="col span-1-of-2 service-2">
+                        <p>How we work it</p>
+                        <a>Friends, do you want to watch football just for your enjoy? If you have a passion
+                        of gambling andthen want to gamb in football matchs, join us.</a>
+                        <p>How we work it</p>
+                        <a>Friends, do you want to watch football just for your enjoy? If you have a passion
+                        of gambling andthen want to gamb in football matchs, join us.</a>
+                        <p>How we work it</p>
+                        <a>Friends, do you want to watch football just for your enjoy? If you have a passion
+                        of gambling andthen want to gamb in football matchs, join us.</a>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+            <div class="soccer">
+                <i class="fas fa-futbol big-icon-1"></i>
+                <i class="fas fa-futbol big-icon-1"></i>
+                <i class="fas fa-futbol big-icon-1"></i>
+                <i class="fas fa-futbol big-icon-1"></i>
+                <i class="fas fa-futbol big-icon-1"></i>
+              </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="valueable-player">
+        <div class="row">
+            <h2>Most valueable LineUp</h2>
+        </div>
+        <div class="lineup-XI animated">
+            <div class="lineup-header">
+            <img src="resources/img/fifa.png" alt="#"><br>
+            <a>Offical valuable lineup eleven</a><br>
+            <span>By Transfer Central</span>
+            <small>Journal</small>
+            </div>
+            <div class="row">
+            <div id="lineup">
+            <div class="row">
+                <div class="row">
+                <div class="forward">
+                    <div class="col span-1-of-3 left-forward">
+                        <div class="card">
+                            <button onclick="myfunction()">
+                            <img src="resources/img/player1.png" alt="#">
+                        </button> 
+                        <div class="title"><p>Neymar Jr</p> </div>
+
+                            <div id="content" class="content" style="display: none;">
+                                <div class="info">
+                                    <div class="info-team">
+                                        <p><a>Paris Seint-Germain</a><img src="resources/img/team21.png" alt=""></p>
+                                    </div> 
+                                    <div class="info-top">
+                                        <div class="col span-1-of-3 age">
+                                            <span>5 ft 9 in</span><br>
+                                            <small>Height</small>
+                                        </div>
+                                        <div class="col span-1-of-3 market-value">
+                                            <span>127M</span><br>
+                                            <small>Value</small>
+                                        </div>
+                                        <div class="col span-1-of-3 age">
+                                            <span>29</span><br>
+                                            <small>Age</small>
+                                        </div>
+                                    </div> 
+                                    <div class="info-bottom">
+                                        <div class="row">
+                                            <i class="fab fa-youtube"></i>
+                                            <i class="fab fa-twitter"></i>
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-3 center-forward">
+                        <div class="card">
+                            <button onclick="myFunction_2()">
+                                <img src="resources/img/player2.png" alt="#">
+                            </button> 
+                        <div class="title"><p>Erling Haland</p></div>
+                        <div id="content2" class="content" style="display: none;">
+                            <div class="info">
+                                <div class="info-team">
+                                    <p><a>Dortmund</a><img src="resources/img/team22.png" alt=""></p>
+                                </div> 
+                                <div class="info-top">
+                                    <div class="col span-1-of-3 age">
+                                        <span>6 ft 3 in</span><br>
+                                        <small>Height</small>
+                                    </div>
+                                    <div class="col span-1-of-3 market-value">
+                                        <span>180M</span><br>
+                                        <small>Value</small>
+                                    </div>
+                                    <div class="col span-1-of-3 age">
+                                        <span>21</span><br>
+                                        <small>Age</small>
+                                    </div>
+                                </div> 
+                                <div class="info-bottom">
+                                    <div class="row">
+                                        <i class="fab fa-youtube"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-3 right-forward">
+                        <div class="card">
+                            <button onclick="myFunction_3()">
+                                <img src="resources/img/player3.png" alt="#">
+                            </button> 
+                        <div class="title"><p>Mbappe</p></div>
+                        <div id="content3" class="content" style="display: none;">
+                            <div class="info">
+                                <div class="info-team">
+                                    <p><a>Paris Seint-Germain</a><img src="resources/img/team21.png" alt=""></p>
+                                </div> 
+                                <div class="info-top">
+                                    <div class="col span-1-of-3 age">
+                                        <span>5 ft 9 in</span><br>
+                                        <small>Height</small>
+                                    </div>
+                                    <div class="col span-1-of-3 market-value">
+                                        <span>200M</span><br>
+                                        <small>Value</small>
+                                    </div>
+                                    <div class="col span-1-of-3 age">
+                                        <span>22</span><br>
+                                        <small>Age</small>
+                                    </div>
+                                </div> 
+                                <div class="info-bottom">
+                                    <div class="row">
+                                        <i class="fab fa-youtube"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="middle">
+                    <div class="col span-1-of-3 left-midfield">
+                        <div class="card">
+                            <button onclick="myFunction_4()">
+                                <img src="resources/img/player4.png" alt="#">
+                            </button> 
+                        <div class="title"><p>Kevin De Bruyne</p></div>
+                        <div id="content4" class="content" style="display: none;">
+                            <div class="info">
+                                <div class="info-team">
+                                    <p><a>Manchester City</a><img src="resources/img/team12.png" alt=""></p>
+                                </div> 
+                                <div class="info-top">
+                                    <div class="col span-1-of-3 age">
+                                        <span>6 ft 0 in</span><br>
+                                        <small>Height</small>
+                                    </div>
+                                    <div class="col span-1-of-3 market-value">
+                                        <span>150M</span><br>
+                                        <small>Value</small>
+                                    </div>
+                                    <div class="col span-1-of-3 age">
+                                        <span>30</span><br>
+                                        <small>Age</small>
+                                    </div>
+                                </div> 
+                                <div class="info-bottom">
+                                    <div class="row">
+                                        <i class="fab fa-youtube"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </div>  
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-3 midfield">
+                        <div class="card">
+                            <button onclick="myFunction_5()">
+                                <img src="resources/img/player5.png" alt="#">
+                            </button> 
+                        <div class="title"><p>N'Golo kante</p></div>
+                        <div id="content5" class="content" style="display: none;">
+                            <div class="info">
+                                <div class="info-team">
+                                    <p><a>Chelsea FC</a><img src="resources/img/team6.png" alt=""></p>
+                                </div> 
+                                <div class="info-top">
+                                    <div class="col span-1-of-3 age">
+                                        <span>5 ft 6 in</span><br>
+                                        <small>Height</small>
+                                    </div>
+                                    <div class="col span-1-of-3 market-value">
+                                        <span>80M</span><br>
+                                        <small>Value</small>
+                                    </div>
+                                    <div class="col span-1-of-3 age">
+                                        <span>30</span><br>
+                                        <small>Age</small>
+                                    </div>
+                                </div> 
+                                <div class="info-bottom">
+                                    <div class="row">
+                                        <i class="fab fa-youtube"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </div>  
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-3 right-midfield">
+                        <div class="card">
+                            <button onclick="myFunction_6()">
+                                <img src="resources/img/player6.png" alt="#">
+                            </button> 
+                        <div class="title"><p>Pedri</p></div>
+                        <div id="content6" class="content" style="display: none;">
+                            <div class="info">
+                                <div class="info-team">
+                                    <p><a>Barcelona FC</a><img src="resources/img/team23.png" alt=""></p>
+                                </div> 
+                                <div class="info-top">
+                                    <div class="col span-1-of-3 age">
+                                        <span>5 ft 9 in</span><br>
+                                        <small>Height</small>
+                                    </div>
+                                    <div class="col span-1-of-3 market-value">
+                                        <span>140M</span><br>
+                                        <small>Value</small>
+                                    </div>
+                                    <div class="col span-1-of-3 age">
+                                        <span>18</span><br>
+                                        <small>Age</small>
+                                    </div>
+                                </div> 
+                                <div class="info-bottom">
+                                    <div class="row">
+                                        <i class="fab fa-youtube"></i>
+                                        <i class="fab fa-twitter"></i>
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </div>  
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="back">
+                <div class="col span-1-of-4 left-sideback">
+                    <div class="card">
+                        <button onclick="myFunction_7()">
+                        <img src="resources/img/player7.png" alt="#">
+                    </button> 
+                    <div class="title"><p>Alphonso davies</p></div>
+                    <div id="content7" class="content" style="display: none;">
+                        <div class="info">
+                            <div class="info-team">
+                                <p><a>Bayern Munich</a><img src="resources/img/team24.png" alt=""></p>
+                            </div> 
+                            <div class="info-top">
+                                <div class="col span-1-of-3 age">
+                                    <span>6 ft 0 in</span><br>
+                                    <small>Height</small>
+                                </div>
+                                <div class="col span-1-of-3 market-value">
+                                    <span>120M</span><br>
+                                    <small>Value</small>
+                                </div>
+                                <div class="col span-1-of-3 age">
+                                    <span>20</span><br>
+                                    <small>Age</small>
+                                </div>
+                            </div> 
+                            <div class="info-bottom">
+                                <div class="row">
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                            </div>  
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 left-centerback">
+                    <div class="card">
+                        <button onclick="myFunction_8()">
+                        <img src="resources/img/player8.png" alt="#">
+                    </button> 
+                    <div class="title"><p>Ruben dias</p></div>
+                    <div id="content8" class="content" style="display: none;">
+                        <div class="info">
+                            <div class="info-team">
+                                <p><a>Manchester city</a><img src="resources/img/team12.png" alt=""></p>
+                            </div> 
+                            <div class="info-top">
+                                <div class="col span-1-of-3 age">
+                                    <span>6 ft 2 in</span><br>
+                                    <small>Height</small>
+                                </div>
+                                <div class="col span-1-of-3 market-value">
+                                    <span>80M</span><br>
+                                    <small>Value</small>
+                                </div>
+                                <div class="col span-1-of-3 age">
+                                    <span>24</span><br>
+                                    <small>Age</small>
+                                </div>
+                            </div> 
+                            <div class="info-bottom">
+                                <div class="row">
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                            </div>  
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 right-centerback">
+                    <div class="card">
+                        <button onclick="myFunction_9()">
+                        <img src="resources/img/player9.png" alt="#">
+                    </button> 
+                    <div class="title"><p>Harry maguire</p></div>
+                    <div id="content9" class="content" style="display: none;">
+                        <div class="info">
+                            <div class="info-team">
+                                <p><a>Manchester U</a><img src="resources/img/team13.png" alt=""></p>
+                            </div> 
+                            <div class="info-top">
+                                <div class="col span-1-of-3 age">
+                                    <span>5 ft 9 in</span><br>
+                                    <small>Height</small>
+                                </div>
+                                <div class="col span-1-of-3 market-value">
+                                    <span>127M</span><br>
+                                    <small>Value</small>
+                                </div>
+                                <div class="col span-1-of-3 age">
+                                    <span>29</span><br>
+                                    <small>Age</small>
+                                </div>
+                            </div> 
+                            <div class="info-bottom">
+                                <div class="row">
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                            </div>  
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-4 right-sideback">
+                    <div class="card">
+                        <button onclick="myFunction_1_0()">
+                        <img src="resources/img/player10.png" alt="#">
+                    </button> 
+                    <div class="title"><p>Joshua Kimmich</p></div>
+                    <div id="content10" class="content" style="display: none;">
+                        <div class="info">
+                            <div class="info-team">
+                                <p><a>Bayern Munich</a><img src="resources/img/team24.png" alt=""></p>
+                            </div> 
+                            <div class="info-top">
+                                <div class="col span-1-of-3 age">
+                                    <span>5 ft 9 in</span><br>
+                                    <small>Height</small>
+                                </div>
+                                <div class="col span-1-of-3 market-value">
+                                    <span>140M</span><br>
+                                    <small>Value</small>
+                                </div>
+                                <div class="col span-1-of-3 age">
+                                    <span>26</span><br>
+                                    <small>Age</small>
+                                </div>
+                            </div> 
+                            <div class="info-bottom">
+                                <div class="row">
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                            </div>  
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <div class="goalkeeper">
+                <div class="card">
+                <button onclick="myFunction_1_1()">
+                    <img src="resources/img/player11.png" alt="#">
+                </button> 
+            <div class="title"><p>Donnarumma</p></div>
+            <div id="content1-1" class="content" style="display: none;">
+                <div class="info">
+                        <div class="info-top">
+                            <div class="col span-1-of-3 age">
+                                <span>33</span><br>
+                                <small>Age</small>
+                            </div>
+                            <div class="col span-1-of-3 market-value">
+                                <span>90M</span><br>
+                                <small>Value</small>
+                            </div>
+                            <div class="col span-1-of-3 age">
+                                <span>33</span><br>
+                                <small>Age</small>
+                            </div>
+                        </div>
+                        <div class="info-bottom">
+                            <div class="col span-1-of-2 goal">
+                                <span>90M</span><br>
+                                <small>Value</small>
+                            </div>
+                            <div class="col span-1-of-2 match">
+                                <span>33</span><br>
+                                <small>Age</small>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            
+            
+                </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <script src="vendors/js/homepage.js">
+        </script>
+    </section>
+<section class="news-ramous" id="news">
+    <div class="row">
+    <h2>News & Ramous</h2>
+    <div class="slidecontent">
+        <div class="slideshow-title">
+            <p>Breaking News</p>
+        </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="resources/img/ramos.jpg" alt="ramos">
+            <p>PSG join Sergio Ramos Transfer Race With Defender Set To Quit
+            Real Madrid This Summer But Hasn't Given Up On New Deal.
+            <a href="#" class="show-more">See More>></a>
+            </p>
+        </div>
+        <div class="mySlides fade">
+            <img src="resources/img/shot.jpg" alt="shot">
+            <p>Ronaldo Angrily Kick Portugal armband after Belgium defeat, Kane says "imposter"
+            ought to be confornted in dressing room.
+            <a href="#" class="show-more">See More>></a>
+            </p>
+        </div>
+        <div class="mySlides fade">
+            <img src="resources/img/Lionel-Messi.jpg" alt="messi">
+            <p>"Messi freekick" trends on twitter after Argentina legend's
+            megical goal vs chile Copa America.
+            <a href="#" class="show-more">See More>></a></p>
+        </div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot-slide"></span> 
+        <span class="dot-slide"></span> 
+        <span class="dot-slide"></span> 
+    </div>
+    </div>                 
+    <div class="news-top">
+            <ul class="breaking-news-top">
+                <li>
+                    <div class="breaking-news">
+                    <img src="resources/img/Lionel-Messi.jpg" alt="messi">
+                    <p>"Messi freekick" trends on twitter after Argentina legend's
+                    megical goal vs chile Copa America.
+                    <a href="#" class="show-more">See More>></a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="breaking-news">
+                        <img src="resources/img/ramos.jpg" alt="ramos">
+                        <p>PSG join Sergio Ramos Transfer Race With Defender Set To Quit
+                        Real Madrid This Summer But Hasn't Given Up On New Deal.
+                        <a href="#" class="show-more">See More>></a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="breaking-news">
+                        <img src="resources/img/shot.jpg" alt="shot">
+                        <p>Ronaldo Angrily Kick Portugal armband after Belgium defeat, Kane says "imposter"
+                        ought to be confornted in dressing room.
+                        <a href="#" class="show-more">See More>></a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="breaking-news">
+                        <img src="resources/img/shot.jpg" alt="shot">
+                        <p>Ronaldo Angrily Kick Portugal armband after Belgium defeat, Kane says "imposter"
+                        ought to be confornted in dressing room.
+                        <a href="#" class="show-more">See More>></a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="news-bottom-1">
+            <div class="col span-1-of-4 news">
+                <img src="resources/img/IMG_20210702_104134.jpg" alt="mourinho">
+                <p>Jose mourinho 
+                "England can rest Maguire,Rice & Philiops....they have enough to beat Ukrane.
+                <a href="#" class="show-more">See More>></a>
+                </p>   
+            </div>
+            <div class="col span-1-of-4 news-2">
+                <img src="resources/img/coach.jpg" alt="coach">
+                <p>Rafael Benitiez: Eventon appoit former Liverpool boss as new manger on...
+                <a href="#" class="show-more">See More>></a>
+                </p>
+            </div>
+            <div class="col span-1-of-4 news">
+                <img src="resources/img/italy.jpg" alt="italy">
+                <p>BREAKING NEWS: Italy play good football.
+                <a href="#" class="show-more">See More>></a>
+                </p>
+            </div>
+            <div class="col span-1-of-4 news-2">
+                <img src="resources/img/zalantan.jpg" alt="zalantan">
+                <p> I'm just warming up',says Ibrahimovic,as he dismisses retirement talk.
+                <a href="#" class="show-more">See More>></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="news-bottom">
+            <div class="col span-1-of-4 news">
+                <img src="resources/img/IMG_20210702_104134.jpg" alt="mourinho">
+                <p>Jose mourinho 
+                "England can rest Maguire,Rice & Philiops....they have enough to beat Ukrane.
+                <a href="#" class="show-more">See More>></a>
+                </p>   
+            </div>
+            <div class="col span-1-of-4 news-2">
+                <img src="resources/img/coach.jpg" alt="coach">
+                <p>Rafael Benitiez: Eventon appoit former Liverpool boss as new manger on...
+                <a href="#" class="show-more">See More>></a>
+                </p>
+            </div>
+            <div class="col span-1-of-4 news">
+                <img src="resources/img/italy.jpg" alt="italy">
+                <p>BREAKING NEWS: Italy play good football.
+                <a href="#" class="show-more">See More>></a>
+                </p>
+            </div>
+            <div class="col span-1-of-4 news-2">
+                <img src="resources/img/zalantan.jpg" alt="zalantan">
+                <p> I'm just warming up',says Ibrahimovic,as he dismisses retirement talk.
+                <a href="#" class="show-more">See More>></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Prereview" id="preview">
+    <h2>Fixtures & Results</h2>
+    <div class="row">
+        <div class="view">
+                <div class="bpl">
+                    <div class="row">
+                    <div class="col span-1-of-3 logo-text">
+                        <p>Premier</p>
+                    </div>
+                    <div class="col span-1-of-3 photo-logo">
+                        <img src="resources/img/Premier-League-logo.png" alt="">
+                    </div>
+                    <div class="col span-1-of-3 logo-text">
+                        <P>League</P>
+                    </div>
+                </div>
+                </div>
+               <div class="match-top">
+                <p>Match &dash; 1</p>
+               </div>
+                <div class="row">
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team3.png" alt="">
+                                <p>Bentford</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    1:30 Am
+                                    </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team1.png" alt="">
+                                <p>Arsenal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team13.png" alt="">
+                                <p>Man U</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    6:00 PM
+                                </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team9.png" alt="">
+                                <p>Leeds</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team5.png" alt="">
+                                <p>Burnley</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    8:30 PM
+                                </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team4.png" alt="">
+                                <p>Brighton</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team6.png" alt="">
+                                <p>Chelsea</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    8:30 PM
+                                </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team7.png" alt="">
+                                <p>Palace</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team8.png" alt="">
+                                <p>Everton</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    8:30 PM
+                                </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team16.png" alt="">
+                                <p>Seints</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team10.png" alt="">
+                                <p>Leicester</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    8:30 PM
+                                </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team20.png" alt="">
+                                <p>Wolves</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team18.png" alt="">
+                                <p>Watford</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    8:30 PM
+                                </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team2.png" alt="">
+                                <p>Villa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team15.png" alt="">
+                                <p>Norwich</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    11:30 PM
+                                </span>
+                                <small>Sat,Aug 14</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team11.png" alt="">
+                                <p>Liverpool</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team14.png" alt="">
+                                <p>Newcastle</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                7:30 PM
+                                </span>
+                                <small>Sun,Aug 15</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team19.png" alt="">
+                                <p>W Ham</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 bpl-match-list">
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team17.png" alt="">
+                                <p>Spur</p>
+                            </div>
+                            <div class="col span-1-of-3 vs">
+                                <span>
+                                    10:00 Am
+                                </span>
+                                <small>Sun,Aug 15</small>
+                            </div>
+                            <div class="col span-1-of-3">
+                                <img src="resources/img/team12.png" alt="">
+                                <p>Man C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-bot">
+                        <p>Today All Result</p>
+                    </div>
+                    <div class="row">
+                        <div class="col span-1-of-2 match-result">
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <img src="resources/img/flag1.png" alt="">
+                                    <p>Argentina</p>
+                                </div>
+                                <div class="col span-1-of-3 vs-result">
+                                    <span>
+                                       &check; 1 &dash; 0 &#x2718;
+                                    </span>
+                                    <small>Copa Cup</small>
+                                </div>
+                                <div class="col span-1-of-3">
+                                    <img src="resources/img/flag2.png" alt="">
+                                    <p>Brazil</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col span-1-of-2 match-result">
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <img src="resources/img/flag3.jpg" alt="">
+                                    <p>Italy</p>
+                                </div>
+                                <div class="col span-1-of-3 vs-result">   
+                                    <span>
+                                        &check; 1 &dash; 0 &#x2718;
+                                    </span>
+                                    <small>Euro Cup</small>
+                                </div>
+                                <div class="col span-1-of-3">
+                                    <img src="resources/img/flag4.png" alt="">
+                                    <p>England</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="table-wards">
+            <div class="bpl">
+                <div class="row">
+                <div class="col span-1-of-3 logo-text">
+                    <p>Premier</p>
+                </div>
+                <div class="col span-1-of-3 photo-logo">
+                    <img src="resources/img/Premier-League-logo.png" alt="">
+                </div>
+                <div class="col span-1-of-3 logo-text">
+                    <P>League</P>
+                </div>
+                </div>
+            </div>
+            <div class="table-ward">
+            <div class="top-of-table"><p>Table</p></div>
+            <table>
+                <thead> 
+                    <tr>
+                        <th>#</th><th>&nbsp;</th><th>Team</th><th>Pl</th><th>W</th><th>D</th><th>L</th><th>Pts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 1</td>
+                        <td><img src="resources/img/team1.png" alt=""></td>
+                        <td>Arsenal</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 2</td>
+                        <td><img src="resources/img/team2.png" alt=""></td>
+                        <td>Aston Villa</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 3</td>
+                        <td><img src="resources/img/team3.png" alt=""></td>
+                        <td>Brentford</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 4</td>
+                        <td><img src="resources/img/team4.png" alt=""></td>
+                        <td>Brighton</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 5</td>
+                        <td><img src="resources/img/team5.png" alt=""></td>
+                        <td>Burnley</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 6</td>
+                        <td><img src="resources/img/team6.png" alt=""></td>
+                        <td>Chelsea</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 7</td>
+                        <td><img src="resources/img/team7.png" alt=""></td>
+                        <td>Crystal Palace</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 8</td>
+                        <td><img src="resources/img/team8.png" alt=""></td>
+                        <td>Everton</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="resources/img/team9.png" alt=""></td>
+                        <td>Leeds</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 10</td>
+                        <td><img src="resources/img/team10.png" alt=""></td>
+                        <td>Leicester City</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 11</td>
+                        <td><img src="resources/img/team11.png" alt=""></td>
+                        <td>Liverpool</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 12</td>
+                        <td><img src="resources/img/team12.png" alt=""></td>
+                        <td>Manchester City</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 13</td>
+                        <td><img src="resources/img/team13.png" alt=""></td>
+                        <td>Manchester United</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 14</td>
+                        <td><img src="resources/img/team14.png" alt=""></td>
+                        <td>Newcastle</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 15</td>
+                        <td><img src="resources/img/team15.png" alt=""></td>
+                        <td>Norwich</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 16</td>
+                        <td><img src="resources/img/team16.png" alt=""></td>
+                        <td>Southampton</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 17</td>
+                        <td><img src="resources/img/team17.png" alt=""></td>
+                        <td>Tottenham</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 18</td>
+                        <td><img src="resources/img/team18.png" alt=""></td>
+                        <td>Watford</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 19</td>
+                        <td><img src="resources/img/team19.png" alt=""></td>
+                        <td>West Ham</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td> 20</td>
+                        <td><img src="resources/img/team20.png" alt=""></td>
+                        <td>Wolves</td>
+                        <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>   
+</section>
+<section class="About-me" id="about-me">
+    <h2>Transfer Central &dash; About</h2>
+    <main class="container">
+        <div class="row">
+            <div class="written">
+                <p>Written by</p>
+                <img src="resources/img/writter.jpg" alt="writter">
+                <h6>Chan Nyein Aung</h6>
+                <div class="written-info"><i class="fas fa-user-graduate small-icon"></i>TU (Hmwabi)</div>
+                <div class="written-info"><i class="fas fa-phone small-icon"></i>+95978024355</div>
+                <div class="written-info"><i class="fas fa-city small-icon"></i>Pyay Township</div>
+                <div class="written-info"><i class="fas fa-mail-bulk small-icon"></i>channyeinaung.sd@gmail.com</div>
+            </div>
+            <div class="email-us">
+            <p>Email Us</p>
+                <div class="row">
+                    <div class="col span-1-of-2 name">
+                        <div class="name">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 company">
+                        <div class="company">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-2 email">
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="col span-1-of-2 phone">
+                        <div class="phone">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" required>
+                        </div>
+                    </div>
+                </div>
+                    <div class="message">
+                        <label for="message">Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" id="submit" value="Submit">
+                    </div>
+            </div>    
+        </div>
+    </main>
+</section>
+
+<section id="sign-up">
+    <h2>SignIn & SignUp</h2>
+    <main class="register-form">
+        <div class="member" id="member">
+            <div class="form-member sign-up-member">
+             <form>
+              <h6>Create Account</h6>
+              <div class="social-member">
+               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+               <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <button>Sign Up</button>
+             </form>
+            </div>
+            <div class="form-member sign-in-member">
+             <form>
+              <h6>Sign in</h6>
+              <div class="social-member">
+               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+               <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              </div>
+              <span>or use your account</span>
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <a href="#">Forgot your password?</a>
+              <button>Sign In</button>
+             </form>
+            </div>
+            <div class="overlay-member">
+             <div class="overlay">
+              <div class="overlay-panel overlay-left">
+               <h6>Welcome Back!</h6>
+               <p>To keep connected with us please login with your personal info</p>
+               <button click="myfuction()" class="gzee" id="signIn">Sign In</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+               <h6>Hello, Friend!</h6>
+               <p>SignUp For<br>
+                free Now</p>
+               <button click="myfuction()" class="gzee" id="signUp">Sign Up</button>
+              </div>
+             </div>
+            </div>
+           </div>
+    </main>
+    <script src="resources/js/signupsection.js"></script>
+</section>
+<footer>
+<div class="footer-top">
+    <div class="row">
+        <div class="col span-1-of-3 footer">
+            <p><span>Learning</span> By</p>
+            <ol>
+                <li>W3 School</li>
+                <li>BMPS learning Myanmar</li>
+                <li>StaftFlow</li>
+            </ol>
+        </div>
+        <div class="col span-1-of-3 footer">
+            <p>Refrence From</p>
+            <ol>
+                <li>Freefontend.com</li>
+                <li>Codepen.io</li>
+                <li>font aweome</li>
+            </ol>
+        </div>
+        <div class="col span-1-of-3 footer">
+            <p>Refrence From</p>
+            <a>This time is really hard to live beacause of covid-19.
+                In stay home preiod, I've many free time.So, I think
+                that to spend my extra time at writing a wesite.I'm not professional web developer.So, It can 
+                have many fault.however, thank you so much for watching to 
+                the end.
+            </a>
+        </div>
+    </div>
+    <div class="follow-us">
+        <p>Can u more follow Us</p>
+        <a><i class="fab fa-facebook-f footer-icon"></i></a>
+        <a><i class="fab fa-google-plus-g footer-icon"></i></a>
+        <a><i class="fab fa-twitter footer-icon"></i></a>
+        <a><i class="fab fa-instagram footer-icon"></i></a>
+        <a><i class="fab fa-whatsapp footer-icon"></i></a>
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+    </div>
+</div>
+<div class="footer-bottom">
+    <div class="row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="footer-bottom-text">
+        <p>@zyanfee // Copyright &COPY; 2021 Transfer Central </p>
+        <div class="line-1"></div>
+    </div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+<script type="text/javascript" src="resources/js/script.js"></script>
+</body>
+</html> 
